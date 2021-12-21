@@ -1,0 +1,18 @@
+#error-container {
+    padding-left: 1rem;
+    margin: 0 0.75rem 0 1.25rem;
+}
+
+#error-title {
+    width: 100%;
+}
+
+#error-title h4 {
+    padding: 1rem 0 0;
+    margin: 0.5rem 0 1.5rem;
+    font-size: 24px;
+}
+
+#error-container p {
+    font-size: 20px;
+}

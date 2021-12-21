@@ -1,0 +1,57 @@
+#map {
+    padding-left: 1rem;
+    margin: 0 2.25rem 0 1.25rem;
+}
+
+#map-title {
+    width: 100%;
+}
+
+#map-title h4 {
+    padding: 1rem 0 0;
+    margin: 0.5rem 0 1.5rem;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 600px;
+}
+
+.leaflet-container {
+    width: 100%;
+    height: 300px;
+    z-index: 0;
+    border: 1px solid black;
+}
+
+@media (max-width: 1200px) {
+    #map {
+        padding-left: 0;
+        margin: 0 2.25rem 0 0.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    #map {
+        margin: 0 1.5rem 0 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #map {
+        padding-left: 0.5rem;
+        margin: 0 1.5rem 0 1rem;
+    }
+}
+
+@media (max-width: 575px) {
+    #map-title h4 {
+        white-space: normal;
+        font-size: 22px;
+    }
+
+    #map {
+        margin: 0 1rem 0 1rem;
+        padding: 0;
+    }
+}

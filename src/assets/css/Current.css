@@ -1,0 +1,306 @@
+#current {
+    padding-left: 1rem;
+    margin: 0 0 0 1.25rem;
+}
+
+#current-title {
+    width: 100%;
+}
+
+#current-title h4 {
+    padding: 1rem 0 0;
+    margin: 0.5rem 0 1.5rem;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 450px;
+}
+
+#current-content {
+    min-width: 330px;
+    margin: 0 1rem 1rem 0;
+    border: 1px solid black;
+    height: 300px;
+}
+
+#current-description {
+    padding: 0;
+    margin: 1.5rem 1rem 0.5rem 1.5rem;
+    font-size: 22px;
+    font-style: italic;
+}
+
+#current-time {
+    padding: 0;
+    margin: 0 1rem 0 1.5rem;
+    font-size: 20px;
+}
+
+#current-box {
+    margin: 1rem 0;
+}
+
+#current-img-temp {
+    margin: 0.75rem 0 0.5rem;
+}
+
+#current-img-temp img {
+    margin: auto 1.5rem;
+    width: 90px;
+    height: 90px;
+}
+
+#current-img-temp h1 {
+    max-width: 110px;
+    font-size: 40px;
+    margin: auto 0.5rem;
+}
+
+#current-img-temp p {
+    max-width: 150px;
+    font-size: 20px;
+    margin: auto 1rem;
+}
+
+#current-conditions {
+    max-width: 100%;
+    gap: 0.5rem;
+    margin-left: 1.5rem;
+}
+
+#humidity-wind, #clouds-rain {
+    width: 100%;
+}
+
+#humidity-wind-one, #clouds-rain-one {
+    width: 42.5%;
+}
+
+#humidity-wind-two, #clouds-rain-two {
+    width: 57.5%;
+}
+
+#current-conditions p {
+    margin: auto 0;
+    font-size: 18px;
+}
+
+.current-icon {
+    margin: auto 0.5rem auto 0;
+    width: 22px;
+    height: 22px;
+}
+
+@media (max-width: 1200px) {
+    #current {
+        margin: 0 0 0 1.25rem;
+    }
+
+    #current-content {
+        margin: 0 0.5rem 1rem 0;
+    }
+
+    #current-description {
+        margin: 1.5rem 1rem 1rem 1rem;
+        font-size: 22px;
+    }
+
+    #current-time {
+        margin: 0 1rem 0 1rem;
+        font-size: 20px;
+    }
+
+    #current-img-temp {
+        margin: 1rem 0;
+    }
+
+    #current-img-temp img {
+        margin: auto 1rem;
+        width: 80px;
+        height: 80px;
+    }
+
+    #current-img-temp h1 {
+        max-width: 110px;
+        font-size: 35px;
+    }
+
+    #current-conditions {
+        margin-left: 1rem;
+    }
+
+    #humidity-wind-one, #clouds-rain-one {
+        width: 45%;
+    }
+    
+    #humidity-wind-two, #clouds-rain-two {
+        width: 55%;
+    }
+
+    #current-conditions p {
+        font-size: 16px;
+    }
+    
+    .current-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    #current {
+        padding-left: 0.5rem;
+        margin: 0 0 0 1rem;
+    }
+
+    #current-img-temp img {
+        margin: auto 0.5rem;
+        width: 70px;
+        height: 70px;
+    }
+
+    #current-img-temp h1 {
+        max-width: 110px;
+        font-size: 30px;
+    }
+
+    #current-img-temp p {
+        font-size: 18px;
+        margin: auto 1rem;
+    }
+
+    #humidity-wind-one, #clouds-rain-one {
+        width: 42.5%;
+    }
+    
+    #humidity-wind-two, #clouds-rain-two {
+        width: 57.5%;
+    }
+}
+
+@media (max-width: 768px) {
+    #current {
+        margin: 0 0 0 1rem;
+    }
+
+    #current-content {
+        margin: 0 1.5rem 1rem 0;
+    }
+
+    #current-description {
+        margin: 1.5rem 1rem 1rem 2rem;
+        font-size: 24px;
+    }
+
+    #current-time {
+        margin: 0 1rem 0 2rem;
+        font-size: 21px;
+    }
+
+    #current-img-temp {
+        margin: 0.5rem 0;
+    }
+
+    #current-img-temp img {
+        margin: auto 2rem;
+        width: 85px;
+        height: 85px;
+    }
+
+    #current-img-temp h1 {
+        margin: auto 2rem auto 0;
+    }
+
+    #current-img-temp p {
+        font-size: 20px;
+    }
+
+    #current-conditions {
+        margin-left: 2rem;
+    }
+
+    #humidity-wind-one, #clouds-rain-one {
+        width: 45%;
+    }
+    
+    #humidity-wind-two, #clouds-rain-two {
+        width: 55%;
+    }
+
+    #current-conditions p {
+        font-size: 20px;
+    }
+    
+    .current-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    #current {
+        padding: 0;
+    }
+
+    #current-title h4 {
+        white-space: normal;
+        font-size: 22px;
+    }
+
+    #current-content {
+        height: auto;
+        min-height: 340px;
+        margin: 0 1rem 1rem 0;
+    }
+    
+    #current-description {
+        margin: 1.5rem 0 1rem 1rem;
+        font-size: 20px;
+    }
+
+    #current-time {
+        margin: 0 0 0 1rem;
+        font-size: 18px;
+    }
+
+    #current-img-temp img {
+        margin: auto 0 auto 0.5rem;
+        width: 70px;
+        height: 70px;
+    }
+
+    #current-img-temp h1 {
+        margin: auto 0.5rem;
+        font-size: 28px;
+    }
+
+    #current-img-temp p {
+        font-size: 18px;
+        margin: auto 0 auto 1rem;
+    }
+
+    #humidity-wind, #clouds-rain {
+        flex-direction: column;
+    }
+
+    #humidity-wind-one, #humidity-wind-two, #clouds-rain-one, #clouds-rain-two {
+        width: 100%;
+    }
+
+    #current-conditions {
+        gap: 0rem;
+        margin-left: 1rem;
+    }
+
+    #current-conditions p {
+        font-size: 18px;
+        margin: auto 0;
+        padding-bottom: 0.5rem;
+    }
+    
+    .current-icon {
+        width: 22px;
+        height: 22px;
+    }
+}

@@ -1,0 +1,17 @@
+#info-btn-box {
+    margin: auto 0;
+}
+
+.info-button {
+    font-size: 30px;
+    margin: auto 1rem auto 0;
+    cursor: pointer;
+}
+
+.modal-text-one {
+    margin: 0 0.5rem 0.5rem;
+}
+
+.modal-text-two {
+    margin: 0.5rem 0.5rem 0;
+}

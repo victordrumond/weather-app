@@ -1,0 +1,53 @@
+#forecast {
+    padding-left: 1rem;
+    margin: 1rem 1.25rem;
+}
+
+#forecast-title h4 {
+    padding: 1rem 0 0;
+    margin: 0.5rem 0 1.5rem;
+    font-size: 24px;
+}
+
+#faExclamation-icon {
+    padding: 1.125rem 0 0;
+    margin: 0.5rem 0 1.5rem 1rem;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+#daily-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 992px) {
+    #forecast {
+        padding-left: 0.5rem;
+        margin: 1rem 1rem;
+    }
+
+    #daily-wrapper {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    #forecast {
+        padding: 0;
+        margin-left: 0.75rem;
+    }
+
+    #forecast-title h4 {
+        font-size: 22px;
+        padding: 1rem 0 0;
+        margin: 0.5rem 0 1.5rem;
+        width: 95%;
+    }
+
+    #faExclamation-icon {
+        font-size: 40px;
+    }
+}

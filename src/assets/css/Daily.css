@@ -1,0 +1,233 @@
+#daily {
+    display: flex;
+    margin: 0 1rem 1rem 0;
+    border: 1px solid black;
+}
+
+#daily-date {
+    margin: auto 0.5rem auto 1rem;
+    width: 120px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#img-description-box {
+    display: flex;
+    width: 100%;
+    max-width: 430px;
+}
+
+#daily img {
+    width: 70px;
+    height: 70px;
+    margin: auto 1.5rem;
+}
+
+#daily-description {
+    margin: auto 1rem;
+}
+
+#daily-description p {
+    margin: auto 0;
+    font-size: 20px;
+    font-style: italic;
+    text-align: start;
+}
+
+#temp-box, #rain-wind-box, #sun-box {
+    margin: auto 0;
+    margin-left: 12px;
+}
+
+#temp-box {
+    width: 130px;
+    flex-direction: column;
+}
+
+#rain-wind-box {
+    width: 180px;
+    flex-direction: column;
+}
+
+#sun-box {
+    width: 170px;
+    flex-direction: column;
+}
+
+.daily-icon {
+    margin: auto 0.5rem;
+    font-size: 20px;
+}
+
+#temp-box p, #rain-wind-box p, #sun-box p {
+    margin: auto 0;
+    text-align: start;
+    font-size: 18px;
+}
+
+@media (max-width: 1200px) {
+    #daily-date {
+        margin: auto 0 auto 1rem;
+        font-size: 19px;
+        text-align: left;
+    }
+
+    #img-description-box {
+        max-width: 400px;
+    }
+    
+    #daily img {
+        width: 65px;
+        height: 65px;
+        margin: auto 1rem;
+    }
+    
+    #daily-description {
+        margin: auto 0.5rem;
+    }
+    
+    #daily-description p {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 1150px) {
+    #img-description-box {
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 1100px) {
+    #img-description-box {
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 1050px) {
+    #img-description-box {
+        max-width: 290px;
+    }
+}
+
+@media (max-width: 992px) {
+    #daily {
+        flex-direction: column;
+        margin: 0 0.5rem 0.5rem 0;
+    }
+
+    #daily-date {
+        margin: 1rem 0 auto 1rem;
+    }
+
+    #img-description-box {
+        max-width: 430px;
+    }
+    
+    #daily img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    #daily-description p {
+        font-size: 20px;
+    }
+
+    #temp-box, #rain-wind-box, #sun-box {
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+
+    #sun-box {
+        margin-bottom: 1rem;
+    }
+
+    #max-temp, #rain, #sunrise {
+        width: 45%;
+    }
+
+    #min-temp, #wind, #sunset {
+        width: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    #daily-date {
+        font-size: 17px;
+    }
+
+    #daily img {
+        width: 60px;
+        height: 60px;
+        margin: auto 0 auto 0.5rem;
+    }
+
+    #daily-description p {
+        font-size: 18px;
+    }
+
+    #max-temp, #rain, #sunrise {
+        width: 40%;
+    }
+
+    #min-temp, #wind, #sunset {
+        width: 60%;
+    }
+
+    .daily-icon {
+        margin: 0.25rem 0.5rem;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 575px) {
+    #daily {
+        margin: 0;
+    }
+
+    #daily-date {
+        font-size: 16px;
+        margin: 1rem 0 0 0.5rem;
+    }
+
+    #img-description-box {
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    #daily img {
+        margin: 0 auto;
+    }
+
+    #daily-description {
+        margin: 0 0 0 0.5rem;
+    }
+
+    #temp-box, #rain-wind-box, #sun-box {
+        margin: 0;
+    }
+
+    #sun-box {
+        margin-bottom: 0.5rem;
+    }
+
+    #max-temp, #rain, #sunrise {
+        width: 45%;
+    }
+
+    #min-temp, #wind, #sunset {
+        width: 55%;
+    }
+
+    #max-temp p, #rain p, #sunrise p, #min-temp p, #wind p, #sunset p {
+        font-size: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .daily-icon {
+        margin: 0.25rem 0.25rem 0.25rem 0.5rem;
+        font-size: 18px;
+    }
+}
