@@ -1,25 +1,47 @@
 import './assets/css/Alerts.css';
 import { formatDateAndTime } from './globalDeclarations.js';
-import { FaRegWindowClose } from 'react-icons/fa';
+import { useState } from 'react';
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import { FaExclamationCircle } from 'react-icons/fa';
 
-function Alerts({alerts, name, country, offset, toggleAlert}) {
+function Alerts({alerts, name, country, offset}) {
 
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+  
     return (
-        <div id="alerts" className="d-flex flex-column">
-            <div id="alerts-title" className="d-flex justify-content-between">
-                <h4 className="text-danger">There {alerts.length === 1 ? "is" : "are"} currently {alerts.length} weather {alerts.length === 1 ? "alert" : "alerts"} to {name}, {country}</h4>
-                <FaRegWindowClose className="text-end close-alerts-icon" onClick={() => toggleAlert()}/>
+        <div id="alerts-btn-box">
+            <div onClick={handleShow}>
+                <FaExclamationCircle
+                    variant="danger"
+                    className="text-danger alerts-button"
+                />
             </div>
-            {alerts.map((item, i) => (
-                <div id="alerts-message" className="d-flex flex-column" key={i}>
-                    <p><b>Sender:</b> {item.sender_name}</p>
-                    <p><b>Title:</b> {item.event}</p>
-                    <p><b>Starting:</b> {formatDateAndTime("date+time", item.start, offset)}</p>
-                    <p><b>Ending:</b> {formatDateAndTime("date+time", item.end, offset)}</p>
-                    <p><b>Message:</b> {item.description}</p>
-                    <p>--------------------------------------------------------------------------------------------</p>
-                </div>
-            ))}
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title className="text-danger">
+                        There {alerts.length === 1 ? "is" : "are"} currently {alerts.length} weather {alerts.length === 1 ? "alert" : "alerts"} to {name}, {country}
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body id="alerts-message">
+                    {alerts.map((item, i) => (
+                        <div className="d-flex flex-column" key={i}>
+                            <p><b>Sender:</b> {item.sender_name}</p>
+                            <p><b>Title:</b> {item.event}</p>
+                            <p><b>Starting:</b> {formatDateAndTime("date+time", item.start, offset)}</p>
+                            <p><b>Ending:</b> {formatDateAndTime("date+time", item.end, offset)}</p>
+                            <p><b>Message:</b> {item.description}</p>
+                        </div>
+                    ))}
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="primary" onClick={handleClose}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </div>
     );
 };

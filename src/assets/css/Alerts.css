@@ -1,30 +1,25 @@
-#alerts {
-    margin: 1rem;
-    position: fixed;
-    left: calc(50% - 400px);
-    top: calc(50% - 200px);
-    width: 800px;
-    height: 400px;
-    background-color: white;
-    overflow-y: auto;
-    border: 1px solid black;
+#alerts-btn-box {
+    margin: auto 0 auto 1rem;
 }
 
-#alerts-title h4 {
-    margin: 1.5rem;
-    font-size: 24px;
-}
-
-.close-alerts-icon {
-    position: relative;
-    top: 0;
-    right: 0;
-    font-size: 24px;
-    margin: 0.5rem 0.5rem 0 0;
+.alerts-button {
+    font-size: 30px;
+    margin: auto 1rem auto 0;
     cursor: pointer;
 }
 
-#alerts-message p {
-    font-size: 16px;
-    margin: 0 1.5rem 1rem 1.5rem;
+#alerts-message div:not(:last-child) {
+    border-bottom: 1px solid lightgrey;
+}
+
+#alerts-message div p {
+    margin-bottom: 0.5rem;
+}
+
+#alerts-message div p:first-child {
+    margin-top: 0.5rem;
+}
+
+#alerts-message div p:last-child {
+    margin-bottom: 0.75rem;
 }

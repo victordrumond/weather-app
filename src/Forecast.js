@@ -3,15 +3,12 @@ import React, { useState, useEffect } from 'react';
 import Daily from './Daily.js';
 import Alerts from './Alerts.js';
 import Error from './Error.js';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExclamation } from '@fortawesome/free-solid-svg-icons';
 
 function Forecast({name, country, lat, lon}) {
 
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [data, setData] = useState([]);
-    const [alertBox, setAlertBox] = useState(false);
 
     useEffect(() => {
 
@@ -29,11 +26,6 @@ function Forecast({name, country, lat, lon}) {
         });
     },[lat, lon]);
 
-    const toggleAlert = () => {
-
-        setAlertBox(!alertBox);
-    };
-
     if (loading) {
         return null;
     } else if (error || !Array.isArray(data)) {
@@ -44,7 +36,12 @@ function Forecast({name, country, lat, lon}) {
                 <div id="forecast-title" className="d-flex">
                     <h4>8-Day Weather Forecast for {name}, {country}</h4>
                     {data[0].hasOwnProperty("alerts") &&
-                        <FontAwesomeIcon icon={faExclamation} id="faExclamation-icon" className="text-danger" onClick={toggleAlert}/>
+                        <Alerts
+                            alerts={data[0].alerts}
+                            name={name}
+                            country={country}
+                            offset={data[0].timezone_offset}
+                        />
                     }
                 </div>
                 <div id="daily-wrapper">
@@ -63,17 +60,6 @@ function Forecast({name, country, lat, lon}) {
                             sunset={item.sunset}
                         />
                     ))}
-                </div>
-                <div id="alerts-wrapper">
-                    {alertBox &&
-                        <Alerts
-                            alerts={data[0].alerts}
-                            name={name}
-                            country={country}
-                            offset={data[0].timezone_offset}
-                            toggleAlert={toggleAlert}
-                        />
-                    }
                 </div>
             </div>
         );
