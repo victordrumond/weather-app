@@ -8,7 +8,7 @@ function Daily({date, offset, description, icon, min_temp, max_temp, rain, wind,
         <div id="daily" style={{backgroundImage: "url(" + backgroundImageObj[icon] + ")", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", color: "black"}}>
             <p id="daily-date">{formatDateAndTime("date", date, offset)}</p>
             <div id="img-description-box">
-                <img src={"http://openweathermap.org/img/wn/" + icon + "@2x.png"} alt={"icon" + icon}/>
+                <img src={"https://openweathermap.org/img/wn/" + icon + "@2x.png"} alt={"icon" + icon}/>
                 <div id="daily-description" className="d-flex">
                     <p>{formatDescription(description)}</p>  
                 </div>
