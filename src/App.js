@@ -11,7 +11,7 @@ function App() {
           <SearchAndDisplay/>
           <div id="footer-container" className="d-flex align-items-center justify-content-center">
               <footer className="text-center">
-                  <p>Weather App | A project by Victor Drumond</p>
+                  <p>&#169; 2021 Weather App | A project by Victor</p>
               </footer>
           </div>
       </div>
