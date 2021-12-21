@@ -57,7 +57,7 @@ function Current({search, passInfo}) {
                         <p id="current-time">{formatDateAndTime("date+time", null, data[0].timezone)}</p>
                     </div>
                     <div id="current-img-temp" className="d-flex">
-                        <img src={"http://openweathermap.org/img/wn/" + data[0].weather[0].icon + "@2x.png"} alt={"icon" + data[0].weather[0].icon}/>
+                        <img src={"https://openweathermap.org/img/wn/" + data[0].weather[0].icon + "@2x.png"} alt={"icon" + data[0].weather[0].icon}/>
                         <h1>{roundTemp(data[0].main.temp)} °C</h1>
                         <p>feels like {roundTemp(data[0].main.feels_like)} °C</p>
                     </div>
