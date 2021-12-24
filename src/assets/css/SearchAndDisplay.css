@@ -58,10 +58,6 @@
 }
 
 @media (max-width: 992px) {
-    #results-container {
-        margin-bottom: 4rem;
-    }
-    
     #current-wrapper {
         width: 53%;
     }
@@ -97,7 +93,7 @@
 
 @media (max-width: 575px) {
     #search-wrapper {
-        margin: -0.5rem 1rem 3rem auto;
+        margin: -0.5rem 1rem 1rem auto;
     }
 
     #search-wrapper input {
